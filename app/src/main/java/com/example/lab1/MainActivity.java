@@ -16,8 +16,7 @@ import android.widget.*;
 public class MainActivity extends AppCompatActivity {
 
     private int counter;
-    private String message;
-    TextView t = (TextView) findViewById(R.id.textView);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,9 +24,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        counter = 50;
-        message = Integer.toString(counter);
-        t.setText(message);
 
 
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -38,21 +34,25 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        counter = 50;
+        TextView t = (TextView) findViewById(R.id.textView);
+        t.setText(String.valueOf(counter));
     }
 
     public void incrementButtonClicked(View v)
     {
         counter++;
-        message = Integer.toString(counter);
-        t.setText(message);
+        TextView t = (TextView) findViewById(R.id.textView);
+        t.setText(String.valueOf(counter));
 
     }
 
     public void decrementButtonClicked(View v)
     {
         counter--;
-        message = Integer.toString(counter);
-        t.setText(message);
+        TextView t = (TextView) findViewById(R.id.textView);
+        t.setText(String.valueOf(counter));
 
     }
 

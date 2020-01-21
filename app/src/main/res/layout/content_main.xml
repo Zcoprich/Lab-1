@@ -23,18 +23,21 @@
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textSize="24sp" />
 
         <Button
             android:id="@+id/incrementButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="incrementButtonClicked"
             android:text="@string/increment" />
 
         <Button
             android:id="@+id/decrementButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="decrementButtonClicked"
             android:text="@string/decrement" />
     </LinearLayout>
 
